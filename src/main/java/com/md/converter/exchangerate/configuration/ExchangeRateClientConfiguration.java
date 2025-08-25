@@ -9,5 +9,5 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "exchanges")
 public class ExchangeRateClientConfiguration {
 
-    private String baseUrl = "https://open.er-api.com/v6/latest";
+  private String baseUrl = "https://open.er-api.com/v6/latest";
 }

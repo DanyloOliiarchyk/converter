@@ -7,8 +7,8 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class ExchangeRateConfiguration {
 
-    @Bean
-    public RestClient exchangeRateClient(){
-        return RestClient.create();
-    }
+  @Bean
+  public RestClient exchangeRateClient() {
+    return RestClient.create();
+  }
 }

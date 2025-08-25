@@ -4,5 +4,5 @@ import java.math.BigDecimal;
 
 public interface ExchangeRateService {
 
-    BigDecimal exchange (String currency, BigDecimal value, String to);
+  BigDecimal exchange(String currency, BigDecimal value, String to);
 }

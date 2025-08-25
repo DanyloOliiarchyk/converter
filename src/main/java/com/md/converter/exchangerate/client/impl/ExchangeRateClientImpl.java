@@ -11,14 +11,15 @@ import org.springframework.web.client.RestClient;
 @RequiredArgsConstructor
 public class ExchangeRateClientImpl implements ExchangeRateClient {
 
-    private final RestClient exchangeRateClient;
-    private final ExchangeRateClientConfiguration configuration;
+  private final RestClient exchangeRateClient;
+  private final ExchangeRateClientConfiguration configuration;
 
-    @Override
-    public ExchangeRateResponseDTO getCurrencyInfo(String currency) {
-        return exchangeRateClient.get()
-                .uri(configuration.getBaseUrl() + "/" + currency)
-                .retrieve()
-                .body(ExchangeRateResponseDTO.class);
-    }
+  @Override
+  public ExchangeRateResponseDTO getCurrencyInfo(String currency) {
+    return exchangeRateClient
+        .get()
+        .uri(configuration.getBaseUrl() + "/" + currency)
+        .retrieve()
+        .body(ExchangeRateResponseDTO.class);
+  }
 }
